@@ -3,7 +3,9 @@ const path = require('path')
 const hbs = require('hbs')
 const geocode = require('../src/utils/geocode')
 const forecast = require('../src/utils/forecast')
+
 const app = express()
+const port = process.env.PORT || 8080
 
 // Path defined
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -20,7 +22,7 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather App',
+        title: 'Weather',
         name: 'Vaibhav Raj'
     })
 })
@@ -85,6 +87,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(8080, () => {
-    console.log('Server is on port 8080..')
+app.listen(port, () => {
+    console.log('Server is on port ' + port + "..")
 })
