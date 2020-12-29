@@ -47,5 +47,9 @@ button {
     color: white;
     padding: 8px;
 }
+pre {
+    color: #333333;
+    font-family: sans-serif;
+}
 
   

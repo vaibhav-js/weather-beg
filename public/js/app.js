@@ -13,7 +13,7 @@ weatherform.addEventListener('submit', (e) => {
             if (data.error) {
                 return messageone.textContent = data.error
             }
-            messageone.textContent = data.location
+            messageone.textContent = git statudata.location
             messagetwo.textContent = data.forecast
         })
     })

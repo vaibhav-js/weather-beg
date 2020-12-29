@@ -12,7 +12,7 @@ const forecast = (address, callback) => {
             callback('Unable to find location', undefined)
         }
         else {
-            callback(undefined, body.weather[0].main + '. It is currently approx ' + Math.ceil((body.main.temp) - 273) + '°C. '+'\nHumidity: '+body.main.humidity)
+            callback(undefined, body.weather[0].main + '. It is currently approx ' + Math.ceil((body.main.temp) - 273) + '°C. '+'\n\nHumidity: '+body.main.humidity)
         }
     })
 }
